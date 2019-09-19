@@ -1,0 +1,48 @@
+{
+  "name": "react-jsonschema-form-theme-blueprintjs",
+  "version": "1.0.0",
+  "description": "Blueprintjs theme for react-jsonschema-form",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:lib": "rm -Rf lib && NODE_ENV=production babel -d lib/ src/"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domhaas/react-jsonschema-form-theme-blueprintjs.git"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "@blueprintjs/core": "^3.18.1",
+    "@blueprintjs/datetime": "^3.13.0",
+    "@blueprintjs/select": "^3.10.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-jsonschema-form": "^1.8.0"
+  },
+  "keywords": [
+    "react",
+    "blueprintjs",
+    "theme",
+    "react-jsonschema-form",
+    "jsonschema",
+    "form"
+  ],
+  "author": "Dominik Haas <domhaas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domhaas/react-jsonschema-form-theme-blueprintjs/issues"
+  },
+  "homepage": "https://github.com/domhaas/react-jsonschema-form-theme-blueprintjs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0"
+  }
+}
