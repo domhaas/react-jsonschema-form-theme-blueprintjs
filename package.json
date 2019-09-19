@@ -36,7 +36,7 @@
     "form"
   ],
   "author": "Dominik Haas <domhaas@gmail.com>",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/domhaas/react-jsonschema-form-theme-blueprintjs/issues"
   },
