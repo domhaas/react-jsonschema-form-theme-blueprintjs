@@ -4,7 +4,7 @@ react-jsonschema-form-theme-blueprintjs
 [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) Theme for the great [Blueprintjs](https://github.com/palantir/blueprint) React UI toolkit.
 It is using the [HOC withTheme](https://github.com/mozilla-services/react-jsonschema-form/pull/1226).
 
-This is a work in progress. I'm currently implementing widgets. Feel free to contribute.
+This is a work in progress and currently this is really a pre-release with only two widgets. Feel free to contribute.
 There's currently no node-package available. Stay tuned.
 
 ## Build
