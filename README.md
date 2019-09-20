@@ -14,6 +14,15 @@ npm i
 npm run build:lib
 ```
 
+## Current state
+| Widget | State |
+| --- | --- |
+| TextWidget | working |
+| CheckboxWidget | working |
+| RadioWidget | working |
+| DateWidget | working |
+
+
 ## Example
 ```javascript
 import React from 'react';

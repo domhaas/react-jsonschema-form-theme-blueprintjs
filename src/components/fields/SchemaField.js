@@ -135,10 +135,15 @@ function DefaultTemplate(props) {
     return <div className="hidden">{children}</div>;
   }
 
+  var inline = false
+  if (props.schema.inline) {
+      inline = true
+  }
+
   if (description) {
     return (
         <WrapIfAdditional {...props}>
-        <FormGroup label={description}>
+        <FormGroup label={description} inline={inline}>
             {displayLabel && <FormGroup label={label}>{children}</FormGroup>}
             {!displayLabel && children}
             {errors}
