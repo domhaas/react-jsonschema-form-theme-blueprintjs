@@ -7,6 +7,8 @@ It is using the [HOC withTheme](https://github.com/mozilla-services/react-jsonsc
 This is a work in progress and currently this is really a pre-release with only two widgets. Feel free to contribute.
 There's currently no node-package available. Stay tuned.
 
+![](https://i.imgur.com/hnoNHBU.png)
+
 ## Build
 ```bash
 git clone git@github.com:domhaas/react-jsonschema-form-theme-blueprintjs.git
