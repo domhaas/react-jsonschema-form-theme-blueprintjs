@@ -17,12 +17,12 @@ npm run build:lib
 ```
 
 ## Current state
-| Widget | State |
-| --- | --- |
-| TextWidget | working |
+| Widget         | State   |
+| -------------- | ------- |
+| TextWidget     | working |
 | CheckboxWidget | working |
-| RadioWidget | working |
-| DateWidget | working |
+| RadioWidget    | working |
+| DateWidget     | working |
 
 
 ## Example
@@ -30,6 +30,7 @@ npm run build:lib
 import React from 'react';
 import { withTheme } from 'react-jsonschema-form';
 import BlueprintjsTheme from 'react-jsonschema-form-theme-blueprintjs';
+import { Button } from "@blueprintjs/core";
 import './App.css';
 
 const ThemedForm = withTheme(BlueprintjsTheme);
@@ -44,13 +45,24 @@ const schema = {
     }
 };
 
+const uiSchema = {
+    "radio": {
+      "ui:widget": "radio",
+        "ui:options": {
+            "inline": true
+        }
+    }
+};
+
 const onSubmit = (e) => {
     console.log('submit', e.formData)
 }
 
 function App() {
     return (
-        <ThemedForm schema={schema} onSubmit={onSubmit} />
+        <ThemedForm schema={schema} uiSchema={uiSchema} onSubmit={onSubmit}>
+            <Button type="submit">submit</Button>
+        </ThemedForm>
     );
 }
 
