@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Checkbox } from "@blueprintjs/core";
-import '@blueprintjs/core/lib/css/blueprint.css';
 
 class CheckboxWidget extends Component {
     render() {

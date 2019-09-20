@@ -1,6 +1,8 @@
-import widgets from './widgets/';
 import React, { Component } from 'react'
 import Form from "react-jsonschema-form";
+import widgets from './widgets/';
+import fields from './fields/';
+import '@blueprintjs/core/lib/css/blueprint.css';
 
 export class BlueprintjsTheme extends Component {
     render() {
@@ -12,5 +14,6 @@ export class BlueprintjsTheme extends Component {
 }
 
 export default {
-    widgets: widgets
+    widgets: widgets,
+    fields: fields
 }

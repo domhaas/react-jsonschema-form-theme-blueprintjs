@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { InputGroup } from "@blueprintjs/core";
-import '@blueprintjs/core/lib/css/blueprint.css';
 
 class TextWidget extends Component {
     render() {

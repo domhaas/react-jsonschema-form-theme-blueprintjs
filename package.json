@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:lib": "rm -Rf lib && NODE_ENV=production babel -d lib/ src/"
+    "build:lib": "NODE_ENV=production babel -d lib/ src/",
+    "watch": "watch 'npm run build:lib' ./src"
   },
   "files": [
     "lib"
@@ -23,6 +24,7 @@
     "@blueprintjs/core": "^3.18.1",
     "@blueprintjs/datetime": "^3.13.0",
     "@blueprintjs/select": "^3.10.0",
+    "moment-timezone": "^0.5.26",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-jsonschema-form": "^1.8.0"
@@ -43,6 +45,7 @@
   "homepage": "https://github.com/domhaas/react-jsonschema-form-theme-blueprintjs#readme",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0"
+    "@babel/core": "^7.6.0",
+    "watch": "^1.0.2"
   }
 }
