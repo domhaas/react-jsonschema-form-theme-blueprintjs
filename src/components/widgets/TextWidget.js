@@ -10,7 +10,7 @@ class TextWidget extends Component {
                 label={label}
                 disabled={readonly}
                 defaultValue={value}
-                onChange={() => onChange(value)} />
+                onChange={(e) => onChange(e.target.value)} />
         );
     }
 }

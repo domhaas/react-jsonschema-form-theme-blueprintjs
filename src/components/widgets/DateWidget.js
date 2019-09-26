@@ -21,7 +21,10 @@ class DateWidget extends Component {
                 formatDate={date => date.toLocaleDateString()}
                 onChange={(val) => onChange(moment(val).format('YYYY/MM/DD'))}
                 popoverProps={{ position: Position.BOTTOM }}
-                reverseMonthAndYearMenus={true} />
+                reverseMonthAndYearMenus={true}
+                inputProps={ { fill: true} }
+                popoverProps={ { fill: true} }
+                />
         );
     }
 }

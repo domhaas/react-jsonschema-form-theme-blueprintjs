@@ -27,6 +27,7 @@
     "moment-timezone": "^0.5.26",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-grid-system": "^5.0.2",
     "react-jsonschema-form": "^1.8.0"
   },
   "keywords": [

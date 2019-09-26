@@ -10,7 +10,8 @@ class TextareaWidget extends Component {
                 label={label}
                 disabled={readonly}
                 defaultValue={value}
-                onChange={() => onChange(value)} />
+                fill={true}
+                onChange={(e) => onChange(e.target.value)} />
         );
     }
 }

@@ -4,6 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as types from "../../types";
 import { FormGroup } from "@blueprintjs/core";
+import { Container, Row, Col } from 'react-grid-system';
 
 import {
   isMultiSelect,
@@ -135,32 +136,49 @@ function DefaultTemplate(props) {
     return <div className="hidden">{children}</div>;
   }
 
+  console.log('#props', props)
   var inline = false
-  if (props.schema.inline) {
-      inline = true
+  if (props.uiSchema["ui:options"] && props.uiSchema["ui:options"]["inline"]) {
+      inline = props.uiSchema["ui:options"]["inline"]
   }
 
-  if (description) {
+    var layout = {
+        md: 12
+    }
+  if (props.uiSchema["ui:layout"]) {
+    //layout = { ...layout, ...props.uiSchema["ui:layout"]}
+    layout = props.uiSchema["ui:layout"]
+}
+
+  if (description.props.description) {
+      console.log("description", description)
     return (
         <WrapIfAdditional {...props}>
+        <Col {...layout}>
         <FormGroup label={description} inline={inline}>
             {displayLabel && <FormGroup label={label}>{children}</FormGroup>}
             {!displayLabel && children}
             {errors}
             {help}
         </FormGroup>
+        </Col>
         </WrapIfAdditional>
     )
   } else {
-    <WrapIfAdditional {...props}>
+
+    console.log('item', props)
+
+    return (<WrapIfAdditional {...props}>
+        <Col {...layout}>
       {displayLabel && <FormGroup label={label}>{children}</FormGroup>}
       {!displayLabel && children}
       {errors}
       {help}
-    </WrapIfAdditional>
+      </Col>
+    </WrapIfAdditional>)
   }
 
-  return (
+  /*return (
     <WrapIfAdditional {...props}>
       {displayLabel && description ? description : null}
       {displayLabel && <FormGroup label={label}>{children}</FormGroup>}
@@ -168,7 +186,7 @@ function DefaultTemplate(props) {
       {errors}
       {help}
     </WrapIfAdditional>
-  );
+  );*/
 }
 if (process.env.NODE_ENV !== "production") {
   DefaultTemplate.propTypes = {
@@ -251,6 +269,8 @@ function WrapIfAdditional(props) {
 }
 
 function SchemaFieldRender(props) {
+    console.log('schema', props)
+
   const {
     uiSchema,
     formData,
@@ -281,6 +301,7 @@ function SchemaFieldRender(props) {
       props.schema.readOnly ||
       schema.readOnly
   );
+
   const autofocus = Boolean(props.autofocus || uiSchema["ui:autofocus"]);
   if (Object.keys(schema).length === 0) {
     return null;

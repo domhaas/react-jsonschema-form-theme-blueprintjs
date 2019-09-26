@@ -21,7 +21,7 @@ class SelectWidget extends Component {
         var options = enumOptions
 
         return (
-            <HTMLSelect value={value} options={options} onChange={(e) => onChange(e.target.value)} />
+            <HTMLSelect value={value} options={options} fill={true} onChange={(e) => onChange(e.target.value)} />
         );
     }
 }

@@ -1,6 +1,9 @@
 import AddButton from "../AddButton";
 import React, { Component } from "react";
 import * as types from "../../types";
+import { setConfiguration, Container, Row, Col } from 'react-grid-system';
+
+setConfiguration({ gutterWidth: 0 });
 
 import {
   orderProperties,
@@ -31,6 +34,8 @@ function DefaultObjectFieldTemplate(props) {
   const { TitleField, DescriptionField } = props;
   return (
     <fieldset id={props.idSchema.$id}>
+    <Container fluid={true}>
+  <Row gutterWidth={15}>
       {(props.uiSchema["ui:title"] || props.title) && (
         <TitleField
           id={`${props.idSchema.$id}__title`}
@@ -54,6 +59,8 @@ function DefaultObjectFieldTemplate(props) {
           disabled={props.disabled || props.readonly}
         />
       )}
+      </Row>
+      </Container>
     </fieldset>
   );
 }
