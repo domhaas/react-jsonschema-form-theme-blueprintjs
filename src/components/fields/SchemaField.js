@@ -136,7 +136,7 @@ function DefaultTemplate(props) {
     return <div className="hidden">{children}</div>;
   }
 
-  console.log('#props', props)
+  //console.log('#props', props)
   var inline = false
   if (props.uiSchema["ui:options"] && props.uiSchema["ui:options"]["inline"]) {
       inline = props.uiSchema["ui:options"]["inline"]
@@ -151,7 +151,7 @@ function DefaultTemplate(props) {
 }
 
   if (description.props.description) {
-      console.log("description", description)
+      //console.log("description", description)
     return (
         <WrapIfAdditional {...props}>
         <Col {...layout}>
@@ -166,7 +166,7 @@ function DefaultTemplate(props) {
     )
   } else {
 
-    console.log('item', props)
+    //console.log('item', props)
 
     return (<WrapIfAdditional {...props}>
         <Col {...layout}>
@@ -269,7 +269,7 @@ function WrapIfAdditional(props) {
 }
 
 function SchemaFieldRender(props) {
-    console.log('schema', props)
+    //console.log('schema', props)
 
   const {
     uiSchema,
