@@ -1,6 +1,6 @@
 {
   "name": "react-jsonschema-form-theme-blueprintjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Blueprintjs theme for react-jsonschema-form",
   "main": "lib/index.js",
   "scripts": {
