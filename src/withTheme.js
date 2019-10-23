@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import Form from "./";
+import Form from 'react-jsonschema-form';
 
 function withTheme(themeProps) {
   return forwardRef(({ fields, widgets, ...directProps }, ref) => (

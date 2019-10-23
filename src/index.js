@@ -1,5 +1,5 @@
 import BlueprintjsTheme from './components/BlueprintjsTheme'
-import withTheme from './components/withTheme'
+import withTheme from './withTheme'
 
 export { withTheme }
 export default BlueprintjsTheme
